@@ -1,0 +1,90 @@
+import random
+print("Welcome to rock, paper, scissors!\n")
+
+R = """
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+"""
+P = """
+     _______
+---'    ____)____
+           ______)
+          _______)
+         _______)
+---.__________)
+"""
+S = """
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+"""
+choice = input("Choose: rock, paper, scissors? Write R,P or S\n").upper()
+options = ["R","P","S"]
+mapped = [R, P, S]
+comp_choice = random.choice(options)
+
+if choice == "R":
+    if comp_choice == "R":
+        print(mapped[0])
+        print("Computer chooses:\n")
+        print(R)
+        print("It\'s a tie!")
+    elif comp_choice == "S":
+        print(mapped[0])
+        print("Computer chooses:\n")
+        print(S)
+        print("You win! <3.")
+    elif comp_choice == "P":
+        print(mapped[0])
+        print("Computer chooses:\n")
+        print(P)
+        print("You lost.")
+    else:
+        print("Enter correct input")
+
+elif choice == "S":
+    if comp_choice == "S":
+        print(mapped[2])
+        print("Computer chooses:\n")
+        print(S)
+        print("It\'s a tie!")
+    elif comp_choice == "R":
+        print(mapped[2])
+        print("Computer chooses:\n")
+        print(R)
+        print("You lost.")
+    elif comp_choice == "P":
+        print(mapped[2])
+        print("Computer chooses:\n")
+        print(P)
+        print("You win!! <3")
+    else:
+        print("Enter correct input")
+
+elif choice == "P":
+    if comp_choice == "P":
+        print(mapped[1])
+        print("Computer chooses:\n")
+        print(P)
+        print("It\'s a tie!")
+    elif comp_choice == "S":
+        print(mapped[1])
+        print("Computer chooses:\n")
+        print(S)
+        print("You lost.")
+    elif comp_choice == "R":
+        print(mapped[1])
+        print("Computer chooses:\n")
+        print(R)
+        print("You win!! <3")
+    else:
+        print("Enter correct input")
+else:
+    print("incorrect input")
